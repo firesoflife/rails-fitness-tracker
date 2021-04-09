@@ -1,0 +1,62 @@
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex justify-content-between z-index-2" role="navigation" >
+  <div class="container">
+    <div class="navbar-brand py-3"><%= link_to "Moove & Groove", root_path, class: "navbar-brand" %> </div>
+    <div class="collapse navbar-collapse d-flex justify-content-end fs-5">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to 'About Us', home_about_path, class: "nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'My Activities', activities_path, class: "nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Add New Activity', new_activity_path, class: "nav-link"%>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Activities
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class="d-flex"><i class="fas fa-running align-self-center ms-3 me-2"></i>
+              <%= link_to "Running", home_about_path, class: "dropdown-item" %>
+            </li>
+            <li class="d-flex"><i class="fas fa-biking align-self-center ms-3"></i>
+              <%= link_to "Cycling", home_about_path, class: "dropdown-item" %>
+            </li>
+            <li class="d-flex"><i class="fas fa-swimmer align-self-center ms-3"></i>
+              <%= link_to "Swimming", home_about_path, class: "dropdown-item" %>
+            </li>
+            <li class="d-flex"><i class="fas fa-hockey-puck align-self-center ms-3"></i>
+              <%= link_to "Hockey", home_about_path, class: "dropdown-item" %>
+            </li>
+            <li class="d-flex"><i class="fas fa-skating align-self-center ms-3"></i>
+              <%= link_to "Ice Skating", home_about_path, class: "dropdown-item" %>
+            </li>
+            <li class="d-flex"><i class="fas fa-table-tennis align-self-center ms-3"></i>
+              <%= link_to "Table Tennis", home_about_path, class: "dropdown-item" %>
+            </li>
+            <li class="d-flex"><i class="fas fa-futbol align-self-center ms-3"></i>
+              <%= link_to "Football", home_about_path, class: "dropdown-item" %>
+            </li>
+            <li class="d-flex"><i class="fas fa-snowboarding align-self-center ms-3"></i>
+              <%= link_to "Snowboarding", home_about_path, class: "dropdown-item" %>
+            </li>
+            <li class="d-flex"><i class="fas fa-dumbbell align-self-center ms-3"></i>
+              <%= link_to "Weight Training", home_about_path, class: "dropdown-item" %>
+            </li>
+            <li class="d-flex"><i class="fas fa-skiing-nordic align-self-center ms-3"></i>
+              <%= link_to "XC Skiing", home_about_path, class: "dropdown-item" %>
+            </li>
+          </ul>
+        </li>
+        <button type="button" class="btn btn-outline-warning ms-5 px-5">
+          Sign In
+        </button>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
