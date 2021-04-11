@@ -1,29 +1,30 @@
 
-<h1>Activities</h1>
+<h1 class="text-center p-3 text-warning">Activity Log</h1>
 
-<table>
-  <thead>
+<br>
+
+<table class="table table-dark table-hover w-75 m-auto">
+    <thead class="text-warning">
     <tr>
-      <th>Activity</th>
-      <th>When</th>
-      <th>How Long</th>
+      <th class="text-center fw-lighter fs-4">Activity</th>
+      <th class="text-center fw-lighter fs-4">When</th>
+      <th class="text-center fw-lighter fs-4">How Long</th>
+      <th class="text-center fw-lighter fs-4">Edit This Activity</th>
+      <th class="text-center fw-lighter fs-4">Remove This Activity</th>
     </tr>
   </thead>
-
   <tbody>
     <% @activities.each do |activity| %>
-      <tr>
-        <td><%= activity.name %></td>
+      <tr class="text-center">
+        <td><%= link_to activity.name, activity, class:'text-warning text-decoration-none fs-5 m-5' %></td>
         <td><%= activity.acivity_date.strftime("%B %d, %Y") %></td>
         <td><%= activity.duration %></td>
-        <td><%= link_to activity.name, activity %></td>
-        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Edit', edit_activity_path(activity), class:'text-light btn btn-outline-warning px-3' %></td>
+        <td><%= link_to 'Remove Activity', activity, method: :delete, data: { confirm: 'Are you sure?' }, class:'text-danger' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Activity', new_activity_path %>
+<%= link_to 'New Activity', new_activity_path, class:'btn btn-warning d-flex justify-content-center w-25 mx-auto my-5' %>
