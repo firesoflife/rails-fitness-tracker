@@ -1,37 +1,41 @@
-<%= form_with(model: activity) do |form| %>
-  <% if activity.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+<main class="container h-75">
+  <div class="row h-100">
+    <div class="col-md-6 offset-md-3 align-self-center bg-dark shadow-lg text-light p-5 rounded-3">
 
-      <ul>
-        <% activity.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+
+    <div class="row g-3">
+      <%= form_with(model: activity) do |form| %>
+        <% if activity.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+            <ul>
+              <% activity.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
+
+        <div class="form-group p-3">
+          <label for="FormControlSelect", class="text-warning pb-3">Choose Your Activity</label>
+          <%= form.select :name, options_for_select([['Running'], ['Cycling'],['Swimming'], ['Hockey'], ['Ice Skating'], ['Table Tennis'], ['Football'], ['Snowboarding'], ['Weight Training'], ['XC Skiing'] ]), {}, {class: "form-select"} %>
+        </div>
+
+        <div class="form-group p-3">
+          <%= form.label :acivity_date, class: 'text-warning' %>
+          <%= form.date_select :acivity_date, {}, {class: "form-select my-2"} %>
+        </div>
+
+        <div class="form-group p-3">
+          <%= form.label :duration, class: 'text-warning pb-2'%>
+          <%= form.text_field :duration, class:'form-control'%>
+        </div>
+
+        <div class="actions p-3 d-grid gap-2 col-10 mx-auto">
+          <%= form.submit class: 'btn btn-warning px-3' %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%#= f.select :activity_id, ([['swimming', 'running']])  %>
   </div>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name  %>
-  </div>
-  
-
-  <div class="field">
-    <%= form.label :acivity_date %>
-    <%= form.date_select :acivity_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :duration %>
-    <%= form.text_field :duration %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</main>
