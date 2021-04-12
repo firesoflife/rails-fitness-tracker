@@ -13,11 +13,18 @@
         <li class="nav-item">
           <%= link_to 'Add New Activity', new_activity_path, class: "nav-link"%>
         </li>
+
+        <%# Select Field %>
+
+
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Activities
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown ">
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown form-group">
+            <div class="form-group p-3">
+          <label for="FormControlSelect", class="text-warning pb-3">Choose Your Activity</label>
             <li class="d-flex"><i class="fas fa-running align-self-center ms-3 me-2"></i>
               <%= link_to "Running", home_about_path, class: "dropdown-item" %>
             </li>

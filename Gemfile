@@ -5,7 +5,7 @@ ruby '3.0.0'
 
 # Gems 
 gem 'rails', '~> 6.1.3'
-gem 'sqlite3', '~> 1.4'
+gem 'pg'
 gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
@@ -16,6 +16,7 @@ gem 'bootstrap', '~> 5.0.0.beta2'
 gem 'popper_js', '~> 2.8.6'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
