@@ -1,6 +1,6 @@
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex justify-content-between z-index-2" role="navigation" >
-  <div class="container">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex justify-content-between z-index-2 px-4" role="navigation" >
+
     <div class="navbar-brand py-3"><%= link_to "Burnout Fitness Tracker", root_path, class: "navbar-brand" %> </div>
     <div class="collapse navbar-collapse d-flex justify-content-end fs-5">
       <ul class="navbar-nav">
@@ -15,6 +15,9 @@
         </li>
           <button type="button" class="btn btn-outline-warning ms-5 px-5">
             <%= link_to 'Log Out', destroy_user_session_path, class:' text-decoration-none text-light fw-bold', method: :delete %>
+        </button>
+          <button type="button" class="btn btn-outline-warning ms-5 px-5">
+            <%= link_to 'Edit Profile', edit_user_registration_path, class:' text-decoration-none text-light fw-bold' %>
         </button>
       
         
@@ -37,7 +40,7 @@
 
       </ul>
     </div>
-  </div>
+
 </nav>
 
 
