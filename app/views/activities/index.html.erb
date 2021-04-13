@@ -10,7 +10,7 @@
       <th class="text-center fw-lighter fs-4">When</th>
       <th class="text-center fw-lighter fs-4">How Long</th>
       <th class="text-center fw-lighter fs-4">Edit This Activity</th>
-      <th class="text-center fw-lighter fs-4">Remove This Activity</th>
+      <th class="text-center fw-lighter fs-4 d-none d-lg-block">Remove This Activity</th>
     </tr>
   </thead>
   <tbody>
@@ -21,7 +21,7 @@
         <td><%= activity.duration %></td>
         
         <td><%= link_to 'Edit', edit_activity_path(activity), class:'text-light btn btn-outline-warning px-3' %></td>
-        <td><%= link_to 'Remove Activity', activity, method: :delete, data: { confirm: 'Are you sure?' }, class:'text-danger' %></td>
+        <td><%= link_to 'Remove Activity', activity, method: :delete, data: { confirm: 'Are you sure?' }, class:'text-danger d-none d-lg-block' %></td>
       </tr>
     <% end %>
   </tbody>

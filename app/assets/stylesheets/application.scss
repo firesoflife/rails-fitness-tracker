@@ -48,3 +48,41 @@ body {
 .show-view {
   opacity: 0.7;
 }
+
+.about-container {
+  position: absolute;
+  top: 20%;
+  right: 8%;
+}
+
+.about-content {
+  position: absolute;
+  top: 35%;
+  right: 8%;
+  line-height: 2.2rem;
+
+  .nav-link {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container,
+  .about-content {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-left: 2rem;
+  }
+
+  .about-containter .tagline {
+    text-align: center !important;
+  }
+  html
+    body
+    div.container
+    div.main.about-container
+    div.fw-light.fs-5.text-end.tagline {
+    text-align: center !important;
+  }
+}
