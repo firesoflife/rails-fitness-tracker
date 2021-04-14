@@ -6,7 +6,7 @@
     <div class="card-body">
       <h5 class="card-title">For <%= @activity.duration %> Minutes On <%= @activity.acivity_date.strftime("%B %d, %Y") %> </h5>
       
-      <a href="#" class="btn btn-outline-warning m-5">Go to All Activities</a>
+      <%= link_to 'Go to All Activities', activities_path, class:"btn btn-outline-warning m-5" %>
     </div>
     <div class="card-footer text-muted">
       <hr>

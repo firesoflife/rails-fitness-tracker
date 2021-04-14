@@ -2,5 +2,14 @@
   <div class="text-white text-center d-flex flex-column align-items-end p-5 animate__animated animate__backInUp burnout">
     <h1>Welcome to Burnout</h1>
     <p>Burn Calories And Track Your Fitness Goals</p>
+
+    <div>
+    <% if user_signed_in? %>
+      <%= link_to 'Get Started', new_activity_path, class:'btn btn-warning ms-3 px-5 fw-bold mt-5' , type: 'button' %>
+    <% else %>
+      <%= link_to 'Sign Up', new_user_registration_path, class:'btn btn-warning ms-3 px-5 fw-bold mt-5' , type: 'button' %>
+    <% end %>
+    </div>
   </div>
+
 </div>

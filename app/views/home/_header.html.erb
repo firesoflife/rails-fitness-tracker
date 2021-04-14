@@ -13,24 +13,20 @@
         <li class="nav-item">
           <%= link_to 'My Activities', activities_path, class: "nav-link"%>
         </li>
-          <button type="button" class="btn btn-outline-warning ms-5 px-5">
-            <%= link_to 'Log Out', destroy_user_session_path, class:' text-decoration-none text-light fw-bold', method: :delete %>
-        </button>
-          <button type="button" class="btn btn-outline-warning ms-5 px-5">
-            <%= link_to 'Edit Profile', edit_user_registration_path, class:' text-decoration-none text-light fw-bold' %>
-        </button>
-      
+
+        <%= link_to 'Edit Profile', edit_user_registration_path, class:'nav-link' %>
         
+        <%= link_to 'Log Out', destroy_user_session_path, class:'nav-link', method: :delete %>
       <% else %>
         <li class="nav-item">
           <%= link_to 'About Us', home_about_path, class: "nav-link"%>
         </li>
-        <button type="button" class="btn btn-outline-warning ms-5 px-5">
-          <%= link_to 'Sign Up', new_user_registration_path, class:'text-light fw-bold text-decoration-none' %>
-        </button>
-        <button type="button" class="btn btn-outline-warning ms-5 px-5">
-          <%= link_to 'Sign In', new_user_session_path, class:'text-light fw-bold text-decoration-none' %>
-        </button>
+        <li>
+          <%= link_to 'Sign Up', new_user_registration_path, class:'nav-link' %>
+        </li>
+        <li>
+          <%= link_to 'Sign In', new_user_session_path, class:'nav-link', type: 'button' %>
+        </li>
       <% end %>
 
 
